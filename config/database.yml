@@ -12,10 +12,13 @@
 default: &default
   adapter: mysql2
   encoding: utf8
+  reconnect: false
+  database: databese-1
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  host: localhost
+  username: hrkyjp
+  password: melon4040
+  socket: /var/lib/mysql/mysql.sock
+  host: database-1.cbjgm7yzh0ts.ap-northeast-1.rds.amazonaws.com
 
 development:
   <<: *default
